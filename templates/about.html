@@ -1,0 +1,65 @@
+{%extends "layout.html"%}
+{%block content%}
+<div id="about_content">
+  <h2>{%block title%}GeoFinder - About{%endblock%}</h2>
+  <div class="about_app">
+    <hr class="hr_ruler"/>
+    <h3>The Developer</h3>
+    <p>
+        I am a developer with 3+ years experience in Object Orientated Programming, Scripting
+        and some Functional programming. Based in <a href='https://is.gd/y21We1' target="_blank">
+        Dublin</a>, Ireland, I'm professionally trained as a Software Engineer with an unending passion
+        for developing better and better software. By 2018, I have successfully developed
+        applications using Python, Java, C# along with a range of front end languages including Javascript,
+        HTML5, CSS3 plus more. In these projects, I have gained experience of frameworks like
+        ASP.NET, ASP.NET Core, Nodejs, Angular 4, Flask plus more. I also have a fondness for
+        Linux based technology and can script in Bash, along with command line work on Arista and
+        Juniper network devices. I periodically keep my
+        <a href='http://jmulhall.azurewebsites.net/' target="_blank">Software Portfolio</a> upto date
+        so check it out for an overview of my portfolio works in software and writing! Below,
+        you can check out a happy camper graduating with a 1st class honour from DBS in my
+        Higher Diploma (Associates Degree) in Science in Computing in 2017.
+        It was a great day and every day coding has been great ever since! If you want to connect
+        with me, I am on
+        <a href='https://www.linkedin.com/in/johnmlhll/' target="_blank">LinkedIn</a> and
+        <a href='https://twitter.com/johnmlhll' target="_blank">Twitter</a> and would love to hear from you today!
+    </p>
+      <a class='pictures' href='http://jmulhall.azurewebsites.net/', target="_blank">
+        <img src=" {{ url_for('static', filename='images/img_grad17Pro.jpg') }}" \
+                    alt='Image of John Mulhall'/>
+      </a>
+    <h3>Purpose</h3>
+    <p>
+      The purpose of this site is to showcase my application development
+      capability using Python 3  and modern software development practices.
+      Too often, we see nice looking web sites/applications that have code readability issues
+      plus more. This can be due to many reasons, most of which are resolvable by adopting modern
+      software development practices. In this case, I use these skills to develop a web app
+      in Python 3.6.4 that uses geopy to get longitude and latitude and run inverse searches
+      for addresses using geo coordinates as an initial feature offering.
+    <p>
+    <h3>Future Application Versions</h3>
+    <p>
+        I have received some great feedback on the beta version of this web application and have
+        put together a list of future enhancements and features that would extend this application
+        in a meaningful way. Bear in mind that geopath a side project on a very limited budget but I will do
+        my best to implement over time as many features as I can for free use by you, the welcome visitor!
+        That said, please note API usage and server CPU time costs so uploading large files for
+        geo coordinates or addresses or any other future features does cost me so I will need to
+        keep it to single query entries for everything except .csv files below 500 records
+        for geo coordinates. The list thus far is as follows:
+      </p>
+      <ol>
+        <li>
+              A search by call sign for the address and maybe longitude, latitude of shortwave radio
+              operators who are registered with the <a href='https://www.fcc.gov/' target="_blank">
+              FCC</a> in the United States
+        </li>
+        <li>
+              A web map for all longitude, latitude results returned from address inputs into the
+              application
+        </li>
+      </ol>
+  </div>
+</div>
+{%endblock%}

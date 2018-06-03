@@ -1,0 +1,33 @@
+{%extends "layout.html"%}
+{%block content%}
+<div id="location_content">
+  <h2>{%block title%}GeoFinder - Location{%endblock%}</h2>
+  <div class="input_forms">
+    <hr class="hr_ruler"/>
+    <h3>Location Finder</h3>
+    <form id="location_query" action="{{ url_for('location') }}" method="POST" enctype="multipart/form-data">
+      <p>
+        <label>Latitude: </label><input class="textboxes" name="lat" type="text" placeholder="Enter Latitude (Required)" max=30 required />
+      </p>
+      <p>
+        <label>Longitude: </label><input class="textboxes" name="long" type="text" placeholder="Enter Longitude (Required)" max=30 required />
+      </p>
+      <p>
+        <label>First Name: </label> <input class="textboxes" name="f_name" type="text" placeholder="First Name (Optional)" max=50 />
+      </p>
+      <p>
+        <label>Last Name: </label> <input class="textboxes" name="l_name" type="text" placeholder="Last Name (Required)" max=50 required />
+      </p>
+      <p>
+        <label>Email Address: </label> <input class="textboxes" name="email_add" type="email" placeholder="example@example.com (Required)" max=70 required />
+      </p>
+      <input class="buttons" type="submit" value="Submit"/>
+      <input class="buttons" type="reset" value="Clear Form"/>
+    </form>
+    <div class="csv_display">
+      {{text|safe}}
+      {%include btn ignore missing%}
+    </div>
+  </div>
+</div>
+{%endblock%}
