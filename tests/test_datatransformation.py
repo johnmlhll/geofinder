@@ -5,9 +5,6 @@ import pandas
 import os
 import time
 
-cov = coverage.Coverage()  # pragma: no cover
-cov.start()  # pragma: no cover
-
 
 class TestDataTransformation(unittest.TestCase):
     '''

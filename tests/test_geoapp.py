@@ -8,11 +8,6 @@ import coverage  # pragma: no cover
 from packages.datatransformation import DataTransformation  # pragma: no cover
 
 
-# start test coverage
-cov = coverage.Coverage()  # pragma: no cover
-cov.start()  # pragma: no cover
-
-
 class TestGeoApp(unittest.TestCase):
     '''
         Test Class Definition: Tests the GeoApp package class and all
